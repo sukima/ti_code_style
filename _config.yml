@@ -1,0 +1,58 @@
+# Base Jekyll configuration
+
+# Grunt handles some Jekyll configuration. If you set something here and
+# it doesn't work, check if it is set in the Gruntfile.
+
+# Use _config.build.yml to override these settings on `grunt build`.
+
+name: ti_code_style
+description: A style guide for writing code in Titanium
+
+author:
+  name: Devin Weaver
+  email: suki@tritarget.org
+  github: sukima
+  twitter: sukima
+
+# Exclude directories and/or files from the conversion.
+# Grunt moves image files and asset directories.
+exclude: ['img', 'css', 'js', 'fonts',
+          '**.png', '**.jpg', '**.jpeg', '**.gif', '**.webp', '**.svg', '**.ico']
+
+# Force inclusion of directories and/or files in the conversion.
+# .htaccess is a good example since dotfiles are excluded by default.
+include: ['.htaccess']
+
+# Default post path style
+# date  /:categories/:year/:month/:day/:title.html
+# pretty  /:categories/:year/:month/:day/:title/
+# none  /:categories/:title.html
+permalink: none
+
+# Publish posts with future date.
+# _config.build.yml sets this to false on `grunt build`
+future: true
+
+# Compile posts in the _drafts directory.
+# _config.build.yml sets this to false on `grunt build`
+show_drafts: true
+
+# Markdown library
+markdown: kramdown
+# Markdown library options
+# kramdown:
+  # auto_ids: true
+  # footnote_nr: 1
+  # entity_output: as_char
+  # toc_levels: 1..6
+  # use_coderay: false
+  # coderay:
+  #   coderay_wrap: div
+  #   coderay_line_numbers: inline
+  #   coderay_line_numbers_start: 1
+  #   coderay_tab_width: 4
+  #   coderay_bold_every: 10
+  #   coderay_css: style
+
+# Use Pygments to highlight code blocks
+pygments: false
